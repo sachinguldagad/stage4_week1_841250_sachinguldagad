@@ -1,0 +1,40 @@
+Spring Rest exception
+@ResponseStatus
+
+#Lombok(Interview)
+1000 feilds
+redundant work
+Automatically generate constructor and getter setter remove redundant work
+Lombok is used to remove redundancy
+lombok 1.18.12(dependency should be add in repositroy)
+Youtube video(Do all operation)
+
+#Code Review-SonarLint(Youtube Video)how why what when
+
+#loggerdebug() instead of system.out.println()
+screen shot 
+
+#Core Java 8 - Functional Interface(Interview)how why what when
+one and only one abastract method
+@FunctionalInterface
+interface sayable
+{
+void say(String msg);
+}
+Why should use functional interface?when what(search on internet)(Interview)
+::externally it called that it has only one function
+@Controlleradvice ,lambda function when what why question
+
+#Core Java 8- Lambda expression(Interview)how why what when
+YouTube Video
+
+#Lambda expression with Foreach();
+
+#Core Java 8- Predicate(Interview)how why what when
+#Core Java 8- Optional(Interview)how why what when
+It avoid getting null pointer exception
+Mock MVC(youtube)
+
+JavaTpoint
+##EXAM TEMPLATE SCREENSHOT
+##Spring Data JPA 
