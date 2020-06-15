@@ -20,14 +20,9 @@ public class CountryController {
 	private static final Logger LOGGER = LoggerFactory.getLogger(SpringLearnApplication.class);
 	
 	@RequestMapping(value = "/country")
-	public Country getCountryIndia()
+	public String countries()
 	{
-		LOGGER.info("START");
-		ApplicationContext context = new ClassPathXmlApplicationContext("country.xml");
-		Country country = context.getBean("in", Country.class);
 		
-		
-		return country;
-		
+		return "HIIII";
 	}
 }

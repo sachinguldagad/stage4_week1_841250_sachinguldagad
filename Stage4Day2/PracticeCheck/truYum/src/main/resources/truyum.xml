@@ -1,0 +1,95 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="item1" class="com.cognizant.truyum.model.MenuItem"
+		scope="prototype">
+		<property name="id" value="85" />
+		<property name="name" value="Kadhai Paneer" />
+		<property name="price" value="100" />
+		<property name="active" value="true" />
+		<property name="dateOfLaunch" value="22/03/1999" />
+		<property name="category" value="Main Course" />
+		<property name="freeDelivery" value="true" />
+	</bean>
+	<bean id="item2" class="com.cognizant.truyum.model.MenuItem"
+		scope="prototype">
+		<property name="id" value="97" />
+		<property name="name" value="Burger" />
+		<property name="price" value="150" />
+		<property name="active" value="true" />
+		<property name="dateOfLaunch" value="03/12/2005" />
+		<property name="category" value="Starter" />
+		<property name="freeDelivery" value="false" />
+	</bean>
+	<bean id="item3" class="com.cognizant.truyum.model.MenuItem"
+		scope="prototype">
+		<property name="id" value="56" />
+		<property name="name" value="Appe" />
+		<property name="price" value="50" />
+		<property name="active" value="true" />
+		<property name="dateOfLaunch" value="16/05/2007" />
+		<property name="category" value="Starter" />
+		<property name="freeDelivery" value="false" />
+	</bean>
+	<bean id="item4" class="com.cognizant.truyum.model.MenuItem"
+		scope="prototype">
+		<property name="id" value="63" />
+		<property name="name" value="Manchurian" />
+		<property name="price" value="70" />
+		<property name="active" value="true" />
+		<property name="dateOfLaunch" value="26/09/2012" />
+		<property name="category" value="Starter" />
+		<property name="freeDelivery" value="true" />
+	</bean>
+	<bean id="item5" class="com.cognizant.truyum.model.MenuItem"
+		scope="prototype">
+		<property name="id" value="69" />
+		<property name="name" value="Masala Dosa" />
+		<property name="price" value="30" />
+		<property name="active" value="true" />
+		<property name="dateOfLaunch" value="20/01/2013" />
+		<property name="category" value="Starter" />
+		<property name="freeDelivery" value="false" />
+	</bean>
+	<bean id="item6" class="com.cognizant.truyum.model.MenuItem"
+		scope="prototype">
+		<property name="id" value="32" />
+		<property name="name" value="Malai Kofta" />
+		<property name="price" value="100" />
+		<property name="active" value="true" />
+		<property name="dateOfLaunch" value="10/02/2014" />
+		<property name="category" value="Main Course" />
+		<property name="freeDelivery" value="true" />
+	</bean>
+
+	<bean id="menuItemList" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<ref bean="item1"></ref>
+				<ref bean="item2"></ref>
+				<ref bean="item3"></ref>
+				<ref bean="item4"></ref>
+				<ref bean="item5"></ref>
+				<ref bean="item6"></ref>
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<bean id="cartItemList1" class="com.cognizant.truyum.model.Cart"
+		scope="prototype">
+		<constructor-arg value = "100"/>
+		<constructor-arg>
+		
+			<list>
+				<ref bean="item1"></ref>
+				<ref bean="item5"></ref>
+				<ref bean="item3"></ref>
+			</list>
+		</constructor-arg>
+		
+	</bean>
+
+
+</beans>

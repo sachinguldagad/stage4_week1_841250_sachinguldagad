@@ -1,0 +1,56 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="1" class="com.example.employee.entity.Employee" scope="prototype">
+        <property name="code" value="IN" />
+        <property name="name" value="Renukesh" />
+        <property name="department" value="Documentation"/>
+    </bean>
+	<bean id="2" class="com.example.employee.entity.Employee" scope="prototype">
+        <property name="code" value="US" />
+        <property name="name" value="Sachin" />
+    	<property name="department" value="Management"/>
+    </bean>
+    <bean id="3" class="com.example.employee.entity.Employee" scope="prototype">
+        <property name="code" value="DE" />
+        <property name="name" value="Rohan" />
+    	<property name="department" value="Developer"/>
+    </bean>
+    <bean id="4" class="com.example.employee.entity.Employee" scope="prototype">
+        <property name="code" value="JP" />
+        <property name="name" value="Ashutosh" />
+    	<property name="department" value="Testing"/>
+    </bean>
+      <bean id="dept1" class="com.example.employee.entity.Department" scope="prototype">
+        <property name="id" value="1" />
+        <property name="name" value="Development" />
+    </bean>
+    
+    <bean id="dept2" class="com.example.employee.entity.Department" scope="prototype">
+        <property name="id" value="2" />
+        <property name="name" value="Testing" />
+    </bean>
+    
+
+	<bean id="employee_list" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<ref bean="1"></ref>
+				<ref bean="2"></ref>
+				<ref bean="3"></ref>
+				<ref bean="4"></ref>
+			</list>
+		</constructor-arg>
+	</bean>
+<bean id="departmentList" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<ref bean="dept1"></ref>
+				<ref bean="dept2"></ref>
+			</list>
+		</constructor-arg>
+	</bean>    
+
+</beans>

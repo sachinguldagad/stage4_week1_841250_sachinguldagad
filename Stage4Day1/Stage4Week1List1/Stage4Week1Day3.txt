@@ -1,0 +1,15 @@
+Functional Programming
+what is functional programming
+types of functional programming
+
+
+#Streams
+not a data Structure
+Youtube video
+
+#advantages of stream over collections
+No storage
+functional in nature
+Laziness seeking
+Possibly unbounded
+Consumable

@@ -1,0 +1,43 @@
+package com.example.employee.controller;
+
+import java.beans.Transient;
+import java.util.ArrayList;
+
+import org.apache.logging.log4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+import com.example.employee.EmployeeApplication;
+import com.example.employee.entity.Employee;
+import com.example.employee.exception.EmployeeNotFoundException;
+import com.example.employee.service.EmployeeDao;
+
+@RestController
+public class EmployeeController {
+
+	//private static final Logger LOGGER=(Logger) LoggerFactory.getLogger(EmployeeApplication.class);
+	@GetMapping("/list")
+	public ArrayList<Employee> getAllEmployees()throws EmployeeNotFoundException
+	{
+//		LOGGER.info("START");
+		ApplicationContext context = new ClassPathXmlApplicationContext("employee.xml");
+		
+		ArrayList<Employee> listOfCountries = new ArrayList<Employee>();
+		listOfCountries = context.getBean("employee_list", ArrayList.class);
+		
+	//	LOGGER.info("END");
+		return listOfCountries; 	
+	}
+	
+//	@RequestMapping("/list")
+//	public String tp()
+//	{
+//		//LOGGER.info("HIII");
+//		return "HIII HELLOO do uor work properly";
+//	}
+}
